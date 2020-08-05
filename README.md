@@ -9,7 +9,10 @@ The module challenge is the afternoon project or assignment that students work t
 ## Objectives
 
 - Explain function scope
+When create variables within a function they are "private" to that specific function.
+
 - Describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript  
+A closure gives you access to an outer function's scope from an inner function. This is important to understand because a closure is essentially created whenever a function is created.
 
 ## Introduction
 
@@ -42,6 +45,8 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure gives you access to an outer function's scope from an inner function. This is important to understand because a closure is essentially created whenever a function is created.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -62,9 +67,15 @@ dansRoll();
 dansRoll();
 ```
 
-a. Where is closure used in this code? How can you tell?
+a. Where is closure used in this code? How can you tell? 
+Closure is used for personalDice() as well as dansRoll and zoesRoll. Because they provide different lexical environments within the same function. One adds Dan's name, while the other adds Zoe's name.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+Dan's name will always remain the same, however the newRoll may change.
+
 c. What is the lexical scope of `newRoll`? 
+it's only accessible within the inner funtion()
+
 
 ### Task 2c - Exit Ticket
 
