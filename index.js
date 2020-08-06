@@ -82,23 +82,22 @@ finalScore(inning, 9) might return:
 */ 
 
 function finalScore(callback, numInnings){
-  let home = 0;
-  let away = 0;
-
+  let home = 0
+  let away = 0
   for(let i = 0; i <= numInnings; i++){
-    callback
-    home += callback;
-    away += callback;
-    let Obj = {
+    home += callback();
+  }
+  for(let j = 0; j <= numInnings; j++){
+    away += callback();
+  }
+    return {
       "Home": home,
       "Away": away
     }
-    return Obj
-  }
 
 }
 
-console.log("Task 3:", finalScore(inning(), 9))
+console.log("Task 3:", finalScore(inning, 9))
 
 /* Task 4: 
 
@@ -125,8 +124,8 @@ function scoreboard(callback, callback2, numInnings) {
   let home = 0;
   let away = 0;
   for(let i = 1; i <= numInnings; i++) {
-    home += callback;
-    away += callback2;
+    home += callback();
+    away += callback2();
     if (i == 1) {
       console.log(`${i}st inning: ${away} - ${home}`)
     }
@@ -143,7 +142,7 @@ function scoreboard(callback, callback2, numInnings) {
   return `Final Score: ${away} - ${home}`
 }
 
-console.log(scoreboard(inning(), awayinning(), 9))
+console.log(scoreboard(inning, awayinning, 9))
 
 
 
